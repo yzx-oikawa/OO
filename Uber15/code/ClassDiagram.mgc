@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="uber.Input" x="643" y="475">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="uber.Taxi"
+            endpointName="taxis" kind="Simple"/>
+        <Association destinationClassName="uber.TaxiGUI"
+            endpointName="gui" kind="Simple"/>
+        <Association destinationClassName="uber.Map" endpointName="map" kind="Simple"/>
+        <Association destinationClassName="uber.Orderlist"
+            endpointName="orderlist" kind="Simple"/>
+        <Communication destinationClassName="uber.NewTaxi"/>
+        <Communication destinationClassName="uber.Road"/>
+        <Communication destinationClassName="uber.Orderlist"/>
+        <Communication destinationClassName="uber.Taxi"/>
+        <Communication destinationClassName="uber.Uber"/>
+        <Communication destinationClassName="uber.Order"/>
+    </Class>
+    <Class name="uber.Uber" x="570" y="197">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="uber.Taxi"
+            endpointName="Taxis" kind="Simple"/>
+        <Communication destinationClassName="uber.Road"/>
+        <Communication destinationClassName="uber.Taxi"/>
+        <Communication destinationClassName="uber.Map"/>
+        <Communication destinationClassName="uber.TaxiGUI"/>
+        <Communication destinationClassName="uber.Light"/>
+    </Class>
+    <Class name="uber.Step" x="155" y="67">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="uber.Map" x="591" y="273">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="uber.Points"
+            endpointName="points[][]" kind="Simple"/>
+        <Association destinationClassName="uber.Road"
+            endpointName="road" kind="Simple"/>
+        <Communication destinationClassName="uber.Road"/>
+        <Communication destinationClassName="uber.Step"/>
+        <Communication destinationClassName="uber.Points"/>
+    </Class>
+    <Class name="uber.TaxiGUI" x="188" y="493">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="uber.Points" x="907" y="144">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="uber.NewTaxi" x="360" y="30">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="uber.Taxi"/>
+        <Communication destinationClassName="uber.Taxi"/>
+        <Communication destinationClassName="uber.Step"/>
+        <Communication destinationClassName="uber.Order"/>
+        <Communication destinationClassName="uber.Map"/>
+        <Communication destinationClassName="uber.TaxiGUI"/>
+        <Communication destinationClassName="uber.Light"/>
+        <Communication destinationClassName="uber.Points"/>
+    </Class>
+    <Class name="uber.Road" x="385" y="549">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="uber.Taxi"
+            endpointName="taxis" kind="Simple"/>
+        <Association destinationClassName="uber.Map" endpointName="map" kind="Simple"/>
+        <Communication destinationClassName="uber.Taxi"/>
+        <Communication destinationClassName="uber.Map"/>
+        <Communication destinationClassName="uber.TaxiGUI"/>
+    </Class>
+    <Class name="uber.Orderlist" x="903" y="460">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="uber.Order"
+            endpointName="List" kind="Simple"/>
+    </Class>
+    <Class name="uber.Taxi" x="363" y="219">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="uber.Light"
+            endpointName="light" kind="Simple"/>
+        <Association destinationClassName="uber.Road"
+            endpointName="road" kind="Simple"/>
+        <Association destinationClassName="uber.TaxiGUI"
+            endpointName="gui" kind="Simple"/>
+        <Association destinationClassName="uber.Map" endpointName="map" kind="Simple"/>
+        <Association destinationClassName="uber.Order"
+            endpointName="order" kind="Simple"/>
+        <Communication destinationClassName="uber.Road"/>
+        <Communication destinationClassName="uber.Step"/>
+        <Communication destinationClassName="uber.Order"/>
+        <Communication destinationClassName="uber.Map"/>
+        <Communication destinationClassName="uber.TaxiGUI"/>
+        <Communication destinationClassName="uber.Light"/>
+        <Communication destinationClassName="uber.Points"/>
+    </Class>
+    <Class name="uber.Order" x="662" y="571">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="uber.Taxi"
+            endpointName="compete" kind="Simple"/>
+        <Communication destinationClassName="uber.Taxi"/>
+    </Class>
+    <Class name="uber.Light" x="140" y="257">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="uber.TaxiGUI"
+            endpointName="gui" kind="Simple"/>
+        <Communication destinationClassName="uber.TaxiGUI"/>
+    </Class>
+    <Class name="uber.Dispatch" x="643" y="44">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="uber.Taxi"
+            endpointName="alltaxi" kind="Simple"/>
+        <Association destinationClassName="uber.Map" endpointName="map" kind="Simple"/>
+        <Association destinationClassName="uber.Orderlist"
+            endpointName="orderlist" kind="Simple"/>
+        <Communication destinationClassName="uber.Orderlist"/>
+        <Communication destinationClassName="uber.Taxi"/>
+        <Communication destinationClassName="uber.Order"/>
+    </Class>
+</ClassDiagram>
